@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lembrol.ana.View.LoginActivity"
+    android:background="@drawable/lembrolback">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="301dp"
+        android:layout_height="109dp"
+        app:srcCompat="@drawable/lembrol"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
+
+    <Button
+        android:id="@+id/bt_Login"
+        android:layout_width="302dp"
+        android:layout_height="53dp"
+        android:text="LOGAR"
+        tools:layout_editor_absoluteX="41dp"
+        android:theme="@style/buttonPattern"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/loginPasswordId"
+        android:layout_alignLeft="@+id/loginEmailId"
+        android:layout_alignStart="@+id/loginEmailId"
+        android:layout_alignRight="@+id/loginPasswordId"
+        android:layout_alignEnd="@+id/loginPasswordId" />
+
+    <TextView
+        android:id="@+id/tv_goRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openUserRegister"
+        android:text="Não tem conta? Cadastre-se"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="408dp"
+        android:layout_below="@+id/bt_Login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:id="@+id/loginEmailId"
+        android:layout_width="308dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="38dp"
+        tools:text="Digite seu email"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/loginPasswordId"
+        android:layout_width="306dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="39dp"
+        tools:text="Digite sua senha"
+        app:layout_constraintTop_toBottomOf="@+id/loginEmailId"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/loginEmailId"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView" />
+
+</RelativeLayout>

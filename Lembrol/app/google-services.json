@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "61185025732",
+    "firebase_url": "https://lembrol-c846a.firebaseio.com",
+    "project_id": "lembrol-c846a",
+    "storage_bucket": "lembrol-c846a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61185025732:android:a6d09e7fdddc1662",
+        "android_client_info": {
+          "package_name": "com.lembrol.ana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61185025732-sk1d6r5f0hauoc2qpk0l1jp3a438nbdd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lembrol.ana",
+            "certificate_hash": "4eb9e3829e37c383d963729ec4df4d452ff3cfb4"
+          }
+        },
+        {
+          "client_id": "61185025732-3317d1jn9v24iv3nnohepg1p128s0rl6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJTeYqhWRxCftqtPLMHNgeat1tSAJHAqY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61185025732-3317d1jn9v24iv3nnohepg1p128s0rl6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

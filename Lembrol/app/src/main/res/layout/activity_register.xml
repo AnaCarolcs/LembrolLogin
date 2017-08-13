@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lembrol.ana.View.RegisterActivity"
+    android:background="@drawable/lembrolback">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="301dp"
+        android:layout_height="109dp"
+        app:srcCompat="@drawable/lembrol"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/bt_Register"
+        android:layout_width="302dp"
+        android:layout_height="53dp"
+        android:text="CADASTRAR"
+        tools:layout_editor_absoluteX="41dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/registerPasswordId" />
+
+    <EditText
+        android:id="@+id/registerNameId"
+        android:layout_height="47dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Digite seu nome"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="196dp"
+        android:layout_width="306dp" />
+
+    <EditText
+        android:id="@+id/registerEmailId"
+        android:layout_width="307dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="Digite seu email"
+        tools:layout_editor_absoluteX="43dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/registerNameId" />
+
+    <EditText
+        android:id="@+id/registerPasswordId"
+        android:layout_width="304dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="Digite sua senha"
+        app:layout_constraintTop_toBottomOf="@+id/registerEmailId"
+        tools:layout_editor_absoluteX="42dp" />
+
+    <TextView
+        android:id="@+id/tv_goLogin"
+        android:layout_width="127dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="22dp"
+        android:onClick="backLogin"
+        android:text="Já é cadastrado?"
+        app:layout_constraintTop_toBottomOf="@+id/bt_Register"
+        tools:layout_editor_absoluteX="139dp" />
+
+</android.support.constraint.ConstraintLayout>
