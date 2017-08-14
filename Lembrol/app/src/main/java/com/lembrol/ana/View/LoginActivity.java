@@ -14,7 +14,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.lembrol.ana.Config.Base64Custom;
 import com.lembrol.ana.Config.FirebaseConfig;
+import com.lembrol.ana.Config.Preference;
 import com.lembrol.ana.Model.User;
 import com.lembrol.ana.R;
 
@@ -72,6 +74,10 @@ public class LoginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
                                 if (task.isSuccessful()){
+
+                                    Preference preference = new Preference(LoginActivity.this);
+                                    String userIdentifier = Base64Custom.code64Base(user.getEmail());
+                                    preference.dataSave(userIdentifier);
 
                                     openMainActivity();
 

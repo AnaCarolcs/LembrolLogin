@@ -2,12 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lembrol.ana.View.TitleListFragment">
+    tools:context="com.lembrol.ana.View.ListTitleFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/lv_title_list_id"
+        android:dividerHeight="1dp"
+        android:divider="@color/colorPrimary"
+        />
 
 </FrameLayout>

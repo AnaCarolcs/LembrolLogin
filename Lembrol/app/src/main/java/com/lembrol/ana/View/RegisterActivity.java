@@ -17,7 +17,9 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
+import com.lembrol.ana.Config.Base64Custom;
 import com.lembrol.ana.Config.FirebaseConfig;
+import com.lembrol.ana.Config.Preference;
 import com.lembrol.ana.Model.User;
 import com.lembrol.ana.R;
 
@@ -70,12 +72,15 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.LENGTH_LONG).show();
 
                     FirebaseUser userFirebase =task.getResult().getUser();
-                    user.setId(userFirebase.getUid() );
+
+                    String userIdentifier = Base64Custom.code64Base(user.getEmail());
+                    user.setId(userIdentifier);
                     user.save();
 
-                    //pro usuario fazer login e depois logar e nao logar direto
-                    authentication.signOut();
-                    finish();
+                    Preference preference = new Preference(RegisterActivity.this);
+                    preference.dataSave(userIdentifier);
+
+                    openUserLogin();
 
                 } else {
 
@@ -105,5 +110,11 @@ public class RegisterActivity extends AppCompatActivity {
         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
         startActivity(intent);
 
+    }
+
+    public void openUserLogin(){
+        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
